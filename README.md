@@ -13,9 +13,16 @@ Covers the full data pipeline: raw SQL exploration → data quality audit → cl
 
 ---
 
-## Screenshot
+## Dashboard Preview
 
-![Dashboard screenshot](dashboard/screenshots/dashboard.png)
+**KPI tiles & revenue trend** — monthly bars with 3-month rolling average overlay
+![KPIs and revenue trend](dashboard/screenshots/01_overview.png)
+
+**Top customers, products, markets & channel mix** — ranked horizontal bars and stacked channel split by year
+![Breakdowns](dashboard/screenshots/02_breakdowns.png)
+
+**Year-over-year growth** — colour-coded bars (green = growth, red = decline) with the 2019–2020 drop visible
+![YoY growth](dashboard/screenshots/03_yoy_growth.png)
 
 ---
 

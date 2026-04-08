@@ -21,7 +21,9 @@ These are your interview talking points — answer them in your own words.
 
 **Question:** Which year had the sharpest YoY decline, and what was the approximate percentage?
 
-> Your answer: ___
+> Revenue grew +377% from 2017→2018 (likely a partial-year baseline in 2017), then declined -14.9% in 2018→2019, and fell a further -57.4% in 2019→2020. The 2019→2020 drop is the sharpest and most significant.
+
+**Hypothesis on the 2020 decline:** The -57.4% drop in 2020 aligns with the global disruption caused by COVID-19 — hardware supply chains, retail closures, and B2B procurement freezes all affected companies like AtliQ in this period. However, this dataset contains no external context to confirm causation. Other possibilities include loss of a major customer, a product line change, or incomplete 2020 data in the dump. In an interview, frame this correctly: *"The timing is consistent with COVID-19 impact, but I'd want to cross-reference with customer churn data and order-fulfilment records before drawing a firm conclusion."*
 
 **Follow-up:**
 *"How did you calculate YoY growth in SQL?"*
