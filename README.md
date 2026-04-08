@@ -38,21 +38,21 @@ AtliQ Hardware is a fictional computer hardware supplier selling across 15 India
 
 ### Year-over-Year Growth
 ![YoY growth](dashboard/screenshots/03_yoy_growth.png)
-*Green = growth, red = decline. The +377% jump in 2018 reflects a partial 2017 baseline; the -57.4% drop in 2020 aligns with COVID-era disruption (see Findings).*
+*Green = growth, red = decline. The apparent +377% jump into 2018 reflects a partial Oct–Dec 2017 baseline; the meaningful story is the sustained decline of -14.9% in 2019 and -57.4% in 2020.*
 
 ---
 
 ## Key Findings
 
-Computed from 94,073 cleaned transactions (2017–2020):
+Computed from 94,073 cleaned transactions (Oct 2017–2020):
 
 - **Total revenue:** ₹51.77 Cr across all years
-- **Peak revenue year:** 2018 — ₹21.37 Cr (+377% YoY from a partial 2017 baseline)
-- **Top customer:** Electricalsara Stores — ₹17.30 Cr (~33% of total revenue)
+- **Customer concentration risk:** Electricalsara Stores alone accounts for ₹17.30 Cr — roughly 33% of total revenue. Losing this single customer would cut revenue by a third, a material risk the sales team should actively manage.
+- **Peak revenue year:** 2018 — ₹21.37 Cr. Note: 2017 data covers only Oct–Dec (3 months), so the apparent +377% 2017→2018 jump is an artifact of the partial baseline, not real growth. The meaningful declines are -14.9% in 2018→2019 and -57.4% in 2019→2020.
 - **Top market:** Delhi NCR — ₹24.40 Cr (~47% of total revenue)
 - **Top product:** Prod040 (Own Brand) — ₹2.36 Cr
 - **Channel mix:** Brick & Mortar 73.9% | E-Commerce 26.1% of revenue
-- **Notable trend:** Revenue peaked in 2018 then declined -14.9% in 2019 and -57.4% in 2020. The 2020 drop is consistent with COVID-19 disruption to hardware supply chains and B2B procurement, though no external data is available to confirm causation.
+- **Notable trend:** The -57.4% drop in 2020 is consistent with COVID-19 disruption to hardware supply chains and B2B procurement. No external data is available to confirm causation — this is a hypothesis worth investigating with order-fulfilment and customer-churn records.
 
 ---
 

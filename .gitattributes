@@ -1,0 +1,3 @@
+# Tell GitHub Linguist to treat notebooks as generated content
+# so Python dominates the repo language bar instead of Jupyter Notebook
+*.ipynb linguist-generated=true
