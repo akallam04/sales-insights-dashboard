@@ -129,18 +129,14 @@ These are your interview talking points — answer them in your own words.
 
 ## Summary Table
 
-Fill this in after exploring the dashboard:
-
 | Metric | Value |
 |--------|-------|
-| Total revenue (INR Cr) | |
-| Date range | |
-| Peak revenue year | |
-| Worst YoY decline | |
-| Top market | |
-| Top market revenue share | |
-| Top customer | |
-| Top customer revenue share | |
-| Customers = 80% of revenue (Pareto) | |
-| E-Commerce share trend | |
-| Rows excluded (sales_amount ≤ 0) | |
+| Total revenue (INR Cr) | ₹51.77 Cr |
+| Date range | 2017–2020 |
+| Peak revenue year | 2018 (₹21.37 Cr) |
+| Worst YoY decline | -57.4% (2019→2020) |
+| Top market | Delhi NCR (₹24.40 Cr, ~47% share) |
+| Top customer | Electricalsara Stores (₹17.30 Cr, ~33% share) |
+| Top product | Prod040 — Own Brand (₹2.36 Cr) |
+| Channel mix | Brick & Mortar 73.9% / E-Commerce 26.1% |
+| Clean rows | 94,073 |
