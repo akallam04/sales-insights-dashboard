@@ -24,6 +24,7 @@ Environment variables (loaded from .env via python-dotenv):
 from __future__ import annotations
 
 import os
+from urllib.parse import quote_plus
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -41,7 +42,8 @@ def _build_engine() -> Engine:
     password = os.getenv("DB_PASSWORD", "")
     db_name = os.getenv("DB_NAME", "sales")
 
-    url = f"mysql+pymysql://{user}:{password}@{host}:{port}/{db_name}"
+    # quote_plus encodes special characters (@ $ ! etc) so the URL parses correctly
+    url = f"mysql+pymysql://{quote_plus(user)}:{quote_plus(password)}@{host}:{port}/{db_name}"
     return create_engine(url, pool_pre_ping=True)
 
 

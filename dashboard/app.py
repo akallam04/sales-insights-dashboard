@@ -12,10 +12,12 @@ Deploy:
 
 import sys
 import os
+from pathlib import Path
 
 # Resolve project root so `from dashboard.db import query` works whether
 # Streamlit is launched from root or from the dashboard/ subdirectory
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
 import pandas as pd
 import plotly.express as px
@@ -24,6 +26,8 @@ from plotly.subplots import make_subplots
 import streamlit as st
 
 from dashboard.db import query
+
+CSV_PATH = ROOT / "data" / "sales_cleaned.csv"
 
 # ---------------------------------------------------------------------------
 # Page config — must be the first Streamlit call
@@ -35,11 +39,32 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------------------------
-# Data loading — cached so it only hits MySQL once per session
+# Data loading — MySQL first, CSV fallback
 # ---------------------------------------------------------------------------
 @st.cache_data(show_spinner="Loading sales data…")
 def load_data() -> pd.DataFrame:
-    df = query("SELECT * FROM sales_cleaned")
+    use_csv = os.getenv("USE_CSV", "0") == "1"
+
+    if not use_csv:
+        try:
+            df = query("SELECT * FROM sales_cleaned")
+            df['order_date'] = pd.to_datetime(df['order_date'])
+            df['year'] = df['year'].astype(int)
+            return df
+        except Exception:
+            # DB unreachable (e.g. Railway free tier paused) — fall through
+            pass
+
+    # CSV fallback
+    if not CSV_PATH.exists():
+        st.error(
+            "Database is unreachable and no local CSV found at "
+            f"`{CSV_PATH}`. Run `python scripts/export_to_csv.py` locally "
+            "and commit `data/sales_cleaned.csv`."
+        )
+        st.stop()
+
+    df = pd.read_csv(CSV_PATH)
     df['order_date'] = pd.to_datetime(df['order_date'])
     df['year'] = df['year'].astype(int)
     return df
