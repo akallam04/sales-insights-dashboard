@@ -1,7 +1,7 @@
 """
 dashboard/app.py
 ----------------
-AtliQ Hardware — Sales Insights Dashboard
+AtliQ Hardware - Sales Insights Dashboard
 
 Run locally:
     streamlit run dashboard/app.py
